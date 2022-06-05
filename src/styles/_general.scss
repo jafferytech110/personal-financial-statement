@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  
+  html{
+    font-size: 14px;
+    width: 100vw;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background-color: $color-background;
+    user-select: none;
+    width: 100vw;
+    overflow-x: hidden;
+    
+  }
+  
+  a{
+    color: $color-dark;
+  }
+  
+  img{
+    display: block;
+    width: 100%;
+  }
+  
+  h1{
+    font-weight: 800;
+    font-size: 1.8erem;
+  }
+  h2{
+    font-size: 1.4rem;
+  }
+  h3{
+    font-size: 0.87rem;
+  }
+  h4{
+    font-size: 0.8rem;
+  }
+  h5{
+    font-size: 0.77rem;
+  }
+  
+  small{
+    font-size: 0.75rem;
+  }
+  .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .text-muted{
+    color: $color-info-dark;
+  }
+  
+  p{
+    color: $color-dark-variant;
+  }
+  
+  b{
+    color: $color-dark;
+  }
+  
+  .primary{
+    color: $color-primary;
+  }
+  
+  .danger{
+    color: $color-danger;
+  }
+  
+  .success{
+    color: $color-success;
+  }
+  
+  .warning{
+    color: $color-warning;
+  }

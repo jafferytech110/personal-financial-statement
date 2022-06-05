@@ -1,0 +1,34 @@
+first create two folders, 
+src and dist or build
+
+in src folder create index.js
+in dist folder create index.html (later on it will be created by webpack)
+
+run npm init -y
+run npm i -D webpack webpack-cli
+
+change script in package.json
+    "build": "webpack --mode production"
+
+
+create webpack.config.js next to package.json file
+    remove --mode from script and add mode in webpack config file
+
+loaders to manage sass images and so on
+
+install loaders such as sass css-loader style-loader
+
+create style related folder in src folder
+
+
+npm i -d html-webpack-plugin to automatically build build folder and files inside such as html
+
+add "dev": "webpack serve" in json and npm install -D webpack-dev-server
+
+
+for backward compatibility of code
+npm i -D babel-loader @babel/core @babel/preset-env
+
+
+npm install --save-dev webpack-bundle-analyzer
+

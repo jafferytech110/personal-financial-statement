@@ -1,0 +1,200 @@
+main{
+   width: 100%;
+   margin-top: 1.4rem;
+    .date{
+        display: inline-block;
+        background-color: $color-light;
+        border-radius: $border-radius-1;
+        margin-top: 1rem;
+        padding: 0.5rem 1.6rem;
+
+        input[type='date']{
+            background-color: transparent;
+            color: $color-dark;
+        }
+    }
+
+    .insights{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.6rem;
+
+        >div{
+            background-color: $color-white;
+            padding: $card-padding;
+            border-radius: $card-border-radius;
+            margin-top: 1rem;
+            box-shadow: $box-shadow;
+            transition: all 200ms ease;
+
+            &:hover{
+                box-shadow: none;
+            }
+
+            span{
+                background-color: $color-primary;
+                padding: 0.5rem;
+                border-radius: 50%;
+                color: $color-white;
+                font-size: 2rem;
+            }
+
+            .middle{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h3{
+                    margin: 1rem 0 0.6rem;
+                    font-size: 1rem;
+                }
+
+                .progress{
+                    position: relative;
+                    width: 92px;
+                    height: 92px;
+                    border-radius: 50%;
+
+                    .number{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    svg{
+                        width: 7rem;
+                        height: 7rem;
+
+                        circle{
+                            fill: none;
+                            stroke: $color-primary;
+                            stroke-width: 14;
+                            stroke-linecap: round;
+                            transform: translate(5px,5px);
+                        }
+                    }
+                }
+            }
+        }
+
+        div.sales{
+            .middle{
+                .progress{
+                    svg{
+                        circle{
+                            stroke-dashoffset: -30;
+                            stroke-dasharray: 200;
+                        }
+                    }
+        
+                }
+            }
+        }
+        div.expenses{
+
+            span{
+                background-color: $color-danger;
+            }
+
+            .middle{
+                .progress{
+                    svg{
+                        circle{
+                            stroke-dashoffset: 20;
+                            stroke-dasharray: 80;
+                        }
+                    }
+        
+                }
+            }
+        }
+
+        div.income{
+
+            span{
+                background-color: $color-success;
+            }
+            .middle{
+                .progress{
+                    svg{
+                        circle{
+                            stroke-dashoffset: 35;
+                            stroke-dasharray: 110;
+                        }
+                    }
+        
+                }
+            }
+        }
+    }
+
+    .recent-orders{
+        margin-top: 2rem;
+
+        h2{
+            margin-bottom: 0.8rem;
+        }
+
+        table{
+            background-color: $color-white;
+            width: 100%;
+            border-radius: $card-border-radius;
+            padding: $card-padding;
+            text-align: center;
+            box-shadow: $box-shadow;
+            transition: all 200ms ease;
+
+            &:hover{
+                box-shadow: none;
+            }
+
+            tbody td{
+                height: 2.8rem;
+                border-bottom: 1px solid $color-light;
+                color: $color-dark-variant;
+            }
+            tbody tr:last-child{
+                border: none;
+            }
+        }
+        a{
+            text-align: center;
+            display: block;
+            margin: 1rem auto;
+            color: $color-primary;
+        }
+    }
+}
+
+@media screen and (max-width: $small-desktop){
+    main{
+
+        .insights{
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $small-devices) {
+    main{
+        margin-top: 8rem;
+    padding: 0 1rem;
+
+    .recent-orders {
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+
+        table{
+            width: 100%;
+            margin: 0;
+        }
+    }
+    }
+}
